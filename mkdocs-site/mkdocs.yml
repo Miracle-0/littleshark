@@ -1,0 +1,5 @@
+site_name: My Docs
+site_url: https://Miracle-0.github.io/
+site_author: Little Shark
+theme:
+  name: material
