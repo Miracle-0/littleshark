@@ -1,5 +1,56 @@
 site_name: 海洋馆
 site_url: https://Miracle-0.github.io/
 site_author: Little Shark
+
 theme:
   name: material
+  language: zh
+  features:
+    - navigation.top
+    - navigation.tabs
+    - toc.integrate
+    - content.code.annotate
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/weather-night
+        name: 切换夜间模式
+    - scheme: slate
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/weather-sunny
+        name: 切换日间模式
+  font:
+    # 如果未放置字体文件，可删除或替换为系统字体
+    text: "CMU Serif"
+    code: "CMU Typewriter"
+
+extra_css:
+  - stylesheets/latex.css
+
+extra_javascript:
+  - javascripts/section-numbering.js
+  - javascripts/math-config.js
+  - https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js
+  - https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js
+
+markdown_extensions:
+  - admonition
+  - footnotes
+  - toc:
+      permalink: true
+  - tables
+  - attr_list
+  - def_list
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+extra:
+  latex_style: true
