@@ -1,0 +1,173 @@
+/* ============= 字体 (可选) ============= */
+/* 放置字体文件到 docs/stylesheets/fonts/ 后再启用
+@font-face {
+  font-family: 'CMU Serif';
+  src: url('../fonts/cmunrm.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'CMU Serif';
+  src: url('../fonts/cmunbx.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'CMU Typewriter';
+  src: url('../fonts/cmuntt.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+*/
+:root {
+  --latex-text-color: #222;
+  --latex-heading-color: #111;
+  --latex-accent: #2b5797;
+  --latex-border-color: #444;
+  --latex-code-bg: #f6f6f6;
+  --latex-blockquote-bg: #f9f9f9;
+  --latex-line-height: 1.45;
+  --latex-max-width: 860px;
+}
+/* 限制正文宽度并居中 */
+.md-content {
+  max-width: var(--latex-max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+/* 正文排版 */
+.md-typeset {
+  font-family: "CMU Serif","Songti SC","Noto Serif SC",serif;
+  font-size: 16px;
+  line-height: var(--latex-line-height);
+  color: var(--latex-text-color);
+  word-break: break-word;
+}
+/* 段落首行缩进（特殊内容除外） */
+.md-typeset p {
+  text-indent: 2em;
+  margin: 0 0 0.9em 0;
+}
+.md-typeset p:has(img),
+.md-typeset p:has(code),
+.md-typeset p:has(pre),
+.md-typeset p:has(.MathJax),
+.md-typeset p:has(.katex),
+.md-typeset blockquote p,
+.md-typeset li p {
+  text-indent: 0;
+}
+/* 标题 */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  font-family: "CMU Serif","Songti SC",serif;
+  font-weight: 700;
+  color: var(--latex-heading-color);
+  text-indent: 0;
+  margin-top: 2.2em;
+  margin-bottom: 0.8em;
+  line-height: 1.2;
+  position: relative;
+}
+.md-content__inner > h1:first-child {
+  margin-top: 0.5em;
+}
+/* 自动编号插入后的样式 */
+.heading-number {
+  color: var(--latex-accent);
+  margin-right: 0.4em;
+  font-weight: 700;
+}
+/* 代码块 */
+.md-typeset pre {
+  background: var(--latex-code-bg);
+  border: 1px solid #ddd;
+  box-shadow: none;
+  border-radius: 4px;
+  padding: 0.75em 1em;
+  font-size: 0.95em;
+  overflow-x: auto;
+}
+.md-typeset code {
+  font-family: "CMU Typewriter","Fira Code","JetBrains Mono",monospace;
+  font-size: 0.95em;
+}
+/* 行号列（某些高亮插件布局） */
+.md-typeset .highlighttable td.linenos {
+  background: #efefef;
+  border-right: 1px solid #ddd;
+  user-select: none;
+}
+/* 引用环境 */
+.md-typeset blockquote {
+  background: var(--latex-blockquote-bg);
+  border-left: 4px solid var(--latex-accent);
+  padding: 0.6em 1em;
+  margin: 1.2em 0;
+  font-size: 0.95em;
+}
+/* 表格三线风格 */
+.md-typeset table {
+  border-collapse: collapse;
+  margin: 1.2em auto;
+  width: auto;
+}
+.md-typeset table thead tr {
+  border-bottom: 2px solid #000;
+}
+.md-typeset table tbody tr {
+  border-bottom: 1px solid #444;
+}
+.md-typeset table tbody tr:last-child {
+  border-bottom: 2px solid #000;
+}
+.md-typeset table th,
+.md-typeset table td {
+  padding: 0.4em 0.8em;
+}
+/* 脚注引用 */
+.md-typeset .footnote-ref {
+  font-size: 0.75em;
+  vertical-align: super;
+}
+/* 数学公式块 */
+.katex-display,
+.arithmatex .MathJax_Display {
+  margin: 1em 0 1em 0;
+  text-indent: 0;
+}
+/* 图片及标题 */
+figure {
+  text-align: center;
+  margin: 1.2em auto;
+}
+figure img {
+  max-width: 100%;
+}
+figure figcaption {
+  font-size: 0.85em;
+  margin-top: 0.4em;
+  font-style: italic;
+  text-indent: 0;
+  color: #444;
+}
+/* 小屏：去掉首行缩进提升可读性 */
+@media (max-width: 640px) {
+  .md-typeset p {
+    text-indent: 0;
+  }
+}
+/* 标点悬挂（支持有限） */
+.md-typeset p {
+  hanging-punctuation: first allow-end;
+}
+/* 自定义提示块（Admonition）微调，可选 */
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 4px;
+  font-size: 0.95em;
+}
