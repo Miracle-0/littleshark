@@ -1,0 +1,1043 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Little Shark">
+      
+      
+        <link rel="canonical" href="https://Miracle-0.github.io/Python/Python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%95%B4%E7%90%86/">
+      
+      
+        <link rel="prev" href="../Python%E5%87%BD%E6%95%B0/">
+      
+      
+        <link rel="next" href="../Python%E9%94%99%E9%A2%98/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>数据结构汇总 - 海洋馆</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="海洋馆" class="md-header__button md-logo" aria-label="海洋馆" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            海洋馆
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              数据结构汇总
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="海洋馆" class="md-nav__button md-logo" aria-label="海洋馆" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    海洋馆
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome to MkDocs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP%20%E7%BF%81%E5%87%AF%20%E6%9C%AA%E7%AB%9F/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OOP 翁凯
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../new/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    New
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%8E%8B%E9%81%93%20%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026年
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%86%99%E9%97%AE%E5%8D%B7%E6%98%9F/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网页爬虫
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Python
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Python%20OOP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python OOP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Python%20%E5%BC%82%E5%B8%B8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    异常
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Python%E5%87%BD%E6%95%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据结构汇总
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据结构汇总
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        列表 list
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tuple" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        元组 tuple
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        字符串
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        集合 set
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        字典
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="字典">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        字典Plus：分支先变成查表，进一步优化表，把它变成字典等型式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plus_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        字典plus
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Python%E9%94%99%E9%A2%98/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python错题
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        列表 list
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tuple" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        元组 tuple
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        字符串
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        集合 set
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        字典
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="字典">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        字典Plus：分支先变成查表，进一步优化表，把它变成字典等型式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plus_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        字典plus
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">数据结构汇总</h1>
+<h2 id="list">列表 list</h2>
+<pre><code class="language-python">a=[] #set up an empty list
+a=[2,3,5,7,11]
+
+#插入
+a.append(13) #append item，加在末尾
+a.extend(&quot;ab&quot;) #逐一加入
+a.insert(2,4) #位置2，放4
+
+#输出
+print(a) #[2,3,5,7,11]
+print(*a) # 2 3 5 7 11
+print(a.index(2)) #输出2的index
+
+slen = len(a)
+smin = min(a)
+smax = max(a)
+ssum = sum(a)
+
+#删除
+a.remove(5) #删掉第一个出现的5
+#如果要删掉所有，用 for i in a[:]，这样会生成一个副本，删除在原列表，就不影响了
+a.pop(2) #删掉下标为2的东西，默认为最后一项
+
+for i in a #遍历
+
+a.reverse() #反转
+a.sort() #默认为升序，降序改为a.sort(reverse=True)
+
+#推导式
+nl = [2*number for number in [1,2,3,4,5]] #基本，得[2, 4, 6, 8, 10]
+nl = [number for number in range(1,8) if number%2==1] #条件过滤，得1,3,5,7
+
+#难题:从外往里看，有括号加括号
+mat=[[i*3+j+1 for j in range(3)] for i in range(5)]
+mattrans=[[row[col] for row in mat] for col in range(3)]
+print(mat) #[[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12], [13, 14, 15]]
+
+#构建二维数组存矩阵
+m = int(input(&quot;请输入矩阵的行数: &quot;))
+n = int(input(&quot;请输入矩阵的列数: &quot;))
+matrix = []
+for i in range(m):
+    row = list(map(int, input().split()))
+    matrix.append(row)
+print(matrix)
+
+#矩阵转置
+matrix1 = []
+for i in range(n):
+    row = [matrix[j][i] for j in range(n)]
+    matrix1.append(row)
+</code></pre>
+<p><img src="D:\Typora\picture\image-20250408110403767.png" alt="image-20250408110403767" style="zoom: 25%;" /></p>
+<p><img src="D:\Typora\picture\image-20250407231226959.png" alt="image-20250407231226959" style="zoom: 33%;" /></p>
+<h2 id="tuple">元组 tuple</h2>
+<blockquote>
+<p>[!NOTE]</p>
+<ol>
+<li>不可修改</li>
+<li>用（），比如（1,3,4.0,7）</li>
+<li>优点</li>
+<li>速度比列表快</li>
+<li>不可修改，所以可以作为字典的键</li>
+<li>适用场景:存储常量数据､字典键､函数返回值等需保证数据完整性的场景｡</li>
+</ol>
+</blockquote>
+<pre><code class="language-python">d = (100,20) #创建
+d.count(100) #100出现的次数
+d.index(20) #20的index
+</code></pre>
+<h2 id="_2">字符串</h2>
+<table>
+<thead>
+<tr>
+<th><img alt="image-20250407232018638" src="D:\Typora\picture\image-20250407232018638.png" /></th>
+<th></th>
+<th><img alt="image-20250407232101119" src="D:\Typora\picture\image-20250407232101119.png" /></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>加密</p>
+<p><img src="D:\Typora\picture\image-20250515224233137.png" alt="image-20250515224233137" style="zoom: 50%;" /></p>
+<pre><code class="language-python">table = [chr(i) for i in range(ord('A'), ord('Z'))]
+new_table = table[:2]+table[2:]
+s = input()
+news = [new_table[table.index(i)] for i in s]
+print(' '.join(news))
+</code></pre>
+<blockquote>
+<p>[!NOTE]</p>
+<p><strong>join</strong></p>
+<p>特别注意输出，比如result = ' '.join(set/list)，这样可以避免最后输出多的空格</p>
+</blockquote>
+<h2 id="set">集合 set</h2>
+<blockquote>
+<p>[!NOTE]</p>
+<ol>
+<li>值不重复，会去重</li>
+</ol>
+</blockquote>
+<pre><code class="language-python">#创建
+fruit = {&quot;apple&quot;,&quot;banana&quot;,&quot;pie&quot;} #创建集合
+
+#添加
+fruit.add(&quot;orange&quot;) #添加单个元素
+fruit.update(&quot;kiwi fruit&quot;, &quot;pineapple&quot;) #多个元素
+
+#删除
+fruit.discard() #如果存在则删除，不存在无效果
+fruit.remove() #如果存在则删除，不存在会抛出异常
+fruit.pop() #如果存在删除任意一个元素并返回，不存在会抛出异常
+fruit.clear() #删除所有元素，剩下一个空集合
+
+#子集subset与超集superset
+s1.issubset(s2) #是否为子集
+s2.issuperset(s1) #是否为超集
+
+#集合比较 == !=  &lt; &lt;= &gt; &gt;=
+
+s1|s2 #并集  或者s1.union(s2)
+s1&amp;s2 #交集
+s1-s2 #差集
+</code></pre>
+<h2 id="_3">字典</h2>
+<pre><code class="language-python">students = {} #设为空
+students = {134342:'张三', 3244235:&quot;李四&quot;} #创建字典
+
+#访问
+students.keys() #返回所有键key
+score[134342] #返回对应的值value
+score.get('134342') #同上，如果找不到会报错
+score.items() #返回所有内容
+
+#修改和增加
+student[134342] = '王五' #修改，若没有则添加
+student.update({13323:'许六'})
+
+#删除
+del student[134342]
+student.pop(134342)  #有返回值
+student.clear()
+
+len(student)  #返回字典条目数量
+
+#遍历
+for name in student:
+    print(f&quot;{name}:{student[name]}&quot;)
+</code></pre>
+<blockquote>
+<p>[!IMPORTANT]</p>
+<p><img alt="image-20250408105728281" src="D:\Typora\picture\image-20250408105728281.png" /></p>
+</blockquote>
+<h3 id="plus">字典Plus：分支先变成查表，进一步优化表，把它变成字典等型式</h3>
+<p><img src="D:\Typora\picture\image-20250411203555720.png" alt="image-20250411203555720" style="zoom:33%;" /></p>
+<pre><code class="language-python">import math
+a = input().split() #得到字符串
+w = math.ceil(float(a[1]))
+f = {&quot;TC&quot;:[10,2,{&quot;Y&quot;:5,&quot;N&quot;:0}], &quot;SN&quot;:[12,3,{&quot;Y&quot;:6,&quot;N&quot;:0}], &quot;SW&quot;:[20,5,{&quot;Y&quot;:10,&quot;N&quot;:0}]}
+cost = f[a[0]][0]+f[a[0]][1]*(w-1)+f[a[0]][2][a[2]] #f[a[0]]负责选到字典的值
+</code></pre>
+<blockquote>
+<p>[!IMPORTANT]</p>
+<p>需要加强训练，不然后果严重，而且可以减少你写if语句</p>
+</blockquote>
+<h3 id="plus_1">字典plus</h3>
+<p><img src="D:\Typora\picture\image-20250411213552201.png" alt="image-20250411213552201" style="zoom:33%;" /></p>
+<pre><code class="language-python">#输入处理
+def myinput(poly_str):
+    poly_dic = {}
+    for term in poly_str: #取出列表中的每一项★
+        coef, exp = map(int, term.split()) 
+        poly_dic[exp] = coef #字符串改字典★
+    return poly_dic
+
+p = input().split(',')
+g = input().split(',')
+que = int(input())
+
+dic_p = myinput(p)
+dic_g = myinput(g)
+
+poly1 = {5:5,3:6,1:-10,0:-2}
+poly2 = {5:7,4:3,2:-8,0:10}
+poly = {} #放取的和
+deg = set(poly1.keys()) | set(poly2.keys()) #取出和，看他们相同的部分
+for i in deg:
+    coeff=poly1.get(i,0)+poly2.get(i,0)  #用get，避免找不到之后报错
+    if coeff!=0: #避免取和以后系数为0
+        poly[i]=coeff #添加项
+</code></pre>
+<p>find() 字符串</p>
+<p>in：列表</p>
+<p>get：字典</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
